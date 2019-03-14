@@ -1,0 +1,10 @@
+C:\Users\Admin\source\repos\MatMaAnimal\MatMaAnimal\bin\Debug\MatMaAnimal.exe.config
+C:\Users\Admin\source\repos\MatMaAnimal\MatMaAnimal\bin\Debug\MatMaAnimal.exe
+C:\Users\Admin\source\repos\MatMaAnimal\MatMaAnimal\bin\Debug\MatMaAnimal.pdb
+C:\Users\Admin\source\repos\MatMaAnimal\MatMaAnimal\obj\Debug\MatMaAnimal.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\MatMaAnimal\MatMaAnimal\obj\Debug\MatMaAnimal.Form1.resources
+C:\Users\Admin\source\repos\MatMaAnimal\MatMaAnimal\obj\Debug\MatMaAnimal.Properties.Resources.resources
+C:\Users\Admin\source\repos\MatMaAnimal\MatMaAnimal\obj\Debug\MatMaAnimal.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\MatMaAnimal\MatMaAnimal\obj\Debug\MatMaAnimal.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\MatMaAnimal\MatMaAnimal\obj\Debug\MatMaAnimal.exe
+C:\Users\Admin\source\repos\MatMaAnimal\MatMaAnimal\obj\Debug\MatMaAnimal.pdb
