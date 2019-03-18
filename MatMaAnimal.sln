@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatMaAnimal", "MatMaAnimal\MatMaAnimal.csproj", "{929EEB9E-3EF7-4522-91C3-AAAB646AFC42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp_DES-Example", "WindowsFormsApp_DES-Example\WindowsFormsApp_DES-Example.csproj", "{6AA1E560-5E9B-4300-958B-AEB47F71C141}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{929EEB9E-3EF7-4522-91C3-AAAB646AFC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{929EEB9E-3EF7-4522-91C3-AAAB646AFC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{929EEB9E-3EF7-4522-91C3-AAAB646AFC42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AA1E560-5E9B-4300-958B-AEB47F71C141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AA1E560-5E9B-4300-958B-AEB47F71C141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AA1E560-5E9B-4300-958B-AEB47F71C141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AA1E560-5E9B-4300-958B-AEB47F71C141}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
