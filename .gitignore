@@ -1,0 +1,22 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+#
+/WindowsFormsApp_DES-Example
+
+#
+/.vs/Crypto_Assignment1/v15/
+
+#
+/.vs/
+
+#
+/MatMaAnimal/Algorithm.cs
+
+#
+/MatMaAnimal/bin/
+
+#
+/MatMaAnimal/obj/
+
