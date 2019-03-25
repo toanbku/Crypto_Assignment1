@@ -78,8 +78,8 @@ namespace MatMaAnimal
                         {
                             string name = saveFileDialog1.FileName;
                             RSA.Gen_key(name, 2048);
+                            MessageBox.Show("Succesfull");
                         }
-                        MessageBox.Show("Succesfull");
                         break;
                     }
                 case 1:
@@ -89,8 +89,9 @@ namespace MatMaAnimal
                         {
                             string name = saveFileDialog1.FileName;
                             RSA.Gen_key(name, 3072);
+                            MessageBox.Show("Succesfull");
                         }
-                        MessageBox.Show("Succesfull");
+                        
                         break;
                     }
                 case 2:
@@ -100,8 +101,9 @@ namespace MatMaAnimal
                         {
                             string name = saveFileDialog1.FileName;
                             RSA.Gen_key(name, 4096);
+                            MessageBox.Show("Succesfull");
                         }
-                        MessageBox.Show("Succesfull");
+                        
                         break;
                     }
                 case 3:
@@ -111,8 +113,9 @@ namespace MatMaAnimal
                         {
                             string name = saveFileDialog1.FileName;
                             RSA.Gen_key(name, 8192);
+                            MessageBox.Show("Succesfull");
                         }
-                        MessageBox.Show("Succesfull");
+                        
                         break;
                     }
                 case 4:
@@ -122,8 +125,9 @@ namespace MatMaAnimal
                         {
                             string name = saveFileDialog1.FileName;
                             RSA.Gen_key(name, 16384);
+                            MessageBox.Show("Succesfull");
                         }
-                        MessageBox.Show("Succesfull");
+                        
                         break;
                     }
                 default:

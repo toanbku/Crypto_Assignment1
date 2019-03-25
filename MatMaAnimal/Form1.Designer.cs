@@ -493,6 +493,7 @@
             this.radioE_RSA.TabIndex = 3;
             this.radioE_RSA.TabStop = true;
             this.radioE_RSA.Text = "RSA";
+            this.metroToolTip1.SetToolTip(this.radioE_RSA, "Cannot apply for large files or folders");
             this.radioE_RSA.UseVisualStyleBackColor = true;
             this.radioE_RSA.CheckedChanged += new System.EventHandler(this.radioE_RSA_CheckedChanged);
             // 
@@ -508,6 +509,7 @@
             this.radioE_AES.TabIndex = 3;
             this.radioE_AES.TabStop = true;
             this.radioE_AES.Text = "AES";
+            this.metroToolTip1.SetToolTip(this.radioE_AES, "Recommended");
             this.radioE_AES.UseVisualStyleBackColor = true;
             // 
             // radioE_TripleDES
@@ -666,6 +668,7 @@
             this.radioD_RSA.TabIndex = 17;
             this.radioD_RSA.TabStop = true;
             this.radioD_RSA.Text = "RSA";
+            this.metroToolTip1.SetToolTip(this.radioD_RSA, "Cannot apply for large files or folder");
             this.radioD_RSA.UseVisualStyleBackColor = true;
             this.radioD_RSA.CheckedChanged += new System.EventHandler(this.radioD_RSA_CheckedChanged);
             // 
@@ -680,6 +683,7 @@
             this.radioD_AES.TabIndex = 16;
             this.radioD_AES.TabStop = true;
             this.radioD_AES.Text = "AES";
+            this.metroToolTip1.SetToolTip(this.radioD_AES, "Recommended");
             this.radioD_AES.UseVisualStyleBackColor = true;
             // 
             // radioD_TripleDES
@@ -717,7 +721,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.81617F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.18383F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156F));
             this.tableLayoutPanel3.Controls.Add(this.txtD_Ciphertext, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label6, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.btnBrowseD_Pass, 2, 1);
@@ -748,7 +752,7 @@
             this.txtD_Ciphertext.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.AllSystemSources;
             this.txtD_Ciphertext.Location = new System.Drawing.Point(177, 25);
             this.txtD_Ciphertext.Name = "txtD_Ciphertext";
-            this.txtD_Ciphertext.Size = new System.Drawing.Size(585, 22);
+            this.txtD_Ciphertext.Size = new System.Drawing.Size(584, 22);
             this.txtD_Ciphertext.TabIndex = 8;
             this.metroToolTip1.SetToolTip(this.txtD_Ciphertext, "Path for the file/folder to be decrypted");
             this.txtD_Ciphertext.Leave += new System.EventHandler(this.txtD_Ciphertext_Leave);
@@ -769,9 +773,9 @@
             // btnBrowseD_Pass
             // 
             this.btnBrowseD_Pass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowseD_Pass.Location = new System.Drawing.Point(768, 77);
+            this.btnBrowseD_Pass.Location = new System.Drawing.Point(767, 77);
             this.btnBrowseD_Pass.Name = "btnBrowseD_Pass";
-            this.btnBrowseD_Pass.Size = new System.Drawing.Size(150, 23);
+            this.btnBrowseD_Pass.Size = new System.Drawing.Size(151, 23);
             this.btnBrowseD_Pass.TabIndex = 18;
             this.btnBrowseD_Pass.Text = "Browse...";
             this.metroToolTip1.SetToolTip(this.btnBrowseD_Pass, "Import a .txt key/password file");
@@ -783,7 +787,7 @@
             this.txtD_Password.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtD_Password.Location = new System.Drawing.Point(177, 78);
             this.txtD_Password.Name = "txtD_Password";
-            this.txtD_Password.Size = new System.Drawing.Size(585, 22);
+            this.txtD_Password.Size = new System.Drawing.Size(584, 22);
             this.txtD_Password.TabIndex = 7;
             this.metroToolTip1.SetToolTip(this.txtD_Password, "Path for a .txt key/password file");
             this.txtD_Password.Leave += new System.EventHandler(this.txtD_Password_Leave);
@@ -791,9 +795,9 @@
             // btnBrowseD_Pla
             // 
             this.btnBrowseD_Pla.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnBrowseD_Pla.Location = new System.Drawing.Point(768, 109);
+            this.btnBrowseD_Pla.Location = new System.Drawing.Point(767, 109);
             this.btnBrowseD_Pla.Name = "btnBrowseD_Pla";
-            this.btnBrowseD_Pla.Size = new System.Drawing.Size(150, 23);
+            this.btnBrowseD_Pla.Size = new System.Drawing.Size(151, 23);
             this.btnBrowseD_Pla.TabIndex = 20;
             this.btnBrowseD_Pla.Text = "Browse...";
             this.btnBrowseD_Pla.UseVisualStyleBackColor = true;
@@ -830,7 +834,7 @@
             this.txtD_Plaintext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtD_Plaintext.Location = new System.Drawing.Point(177, 109);
             this.txtD_Plaintext.Name = "txtD_Plaintext";
-            this.txtD_Plaintext.Size = new System.Drawing.Size(585, 22);
+            this.txtD_Plaintext.Size = new System.Drawing.Size(584, 22);
             this.txtD_Plaintext.TabIndex = 9;
             this.txtD_Plaintext.Leave += new System.EventHandler(this.txtD_Plaintext_Leave);
             // 
@@ -839,9 +843,9 @@
             this.btnDecrypt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDecrypt.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnDecrypt.Location = new System.Drawing.Point(768, 169);
+            this.btnDecrypt.Location = new System.Drawing.Point(767, 169);
             this.btnDecrypt.Name = "btnDecrypt";
-            this.btnDecrypt.Size = new System.Drawing.Size(150, 72);
+            this.btnDecrypt.Size = new System.Drawing.Size(151, 72);
             this.btnDecrypt.TabIndex = 14;
             this.btnDecrypt.Text = "Submit";
             this.btnDecrypt.UseVisualStyleBackColor = false;
@@ -859,7 +863,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(585, 103);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(584, 103);
             this.tableLayoutPanel5.TabIndex = 28;
             // 
             // flowLayoutPanel4
@@ -870,7 +874,7 @@
             this.flowLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 68);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(579, 32);
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(578, 32);
             this.flowLayoutPanel4.TabIndex = 29;
             // 
             // checkBoxDelSrc
@@ -912,7 +916,7 @@
             this.checkBoxUseSrcD.Dock = System.Windows.Forms.DockStyle.Top;
             this.checkBoxUseSrcD.Location = new System.Drawing.Point(3, 3);
             this.checkBoxUseSrcD.Name = "checkBoxUseSrcD";
-            this.checkBoxUseSrcD.Size = new System.Drawing.Size(579, 21);
+            this.checkBoxUseSrcD.Size = new System.Drawing.Size(578, 21);
             this.checkBoxUseSrcD.TabIndex = 27;
             this.checkBoxUseSrcD.Text = "Use Source Folder";
             this.checkBoxUseSrcD.UseVisualStyleBackColor = true;
@@ -924,9 +928,9 @@
             this.flowLayoutPanel2.Controls.Add(this.btnBrowseD_CipFolder);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(768, 3);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(767, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(150, 66);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(151, 66);
             this.flowLayoutPanel2.TabIndex = 29;
             // 
             // btnBrowseD_Cip

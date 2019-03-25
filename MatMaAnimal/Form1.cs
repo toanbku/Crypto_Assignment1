@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Security.Cryptography;
 using System.Diagnostics;
+using Microsoft.VisualBasic;
 
 namespace MatMaAnimal
 {
@@ -154,10 +155,21 @@ namespace MatMaAnimal
                             this.Invoke((Action)(() => txtE_Status.Text += item + "=> Some thing went wrong \r\n"));
                         }
                     }
+
+                    // delete source files
+                    if (checkBoxDel.Checked && check)
+                    {
+                        //System.Security.Permissions.FileIOPermission fp = new System.Security.Permissions.FileIOPermission(System.Security.Permissions.FileIOPermissionAccess.Write, txtE_Plaintext.Text);
+                        new FileInfo(item + ".enc").CopyTo(item, true);
+                        //File.Copy(item + ".enc", item, true);
+                        FileInfo f = new FileInfo(item);
+                        f.Delete();
+                    }
                 }
                 //Open Target
                 if (checkBoxOpenTarg.Checked == true)
                     Process.Start("explorer.exe", txtD_Ciphertext.Text);
+                
             }
             else
             {
@@ -223,6 +235,14 @@ namespace MatMaAnimal
                 //Open Target
                 if (checkBoxOpenTarg.Checked == true)
                     Process.Start("explorer.exe", folderpathE);
+                // delete source files
+                if (checkBoxDel.Checked && check)
+                {
+                    File.Copy(pathE, txtE_Plaintext.Text, true);
+                    FileInfo f = new FileInfo(txtE_Plaintext.Text);
+                    f.Delete();
+                }
+
             }
 
 
@@ -296,17 +316,26 @@ namespace MatMaAnimal
 
                 foreach (var item in filePaths)
                 {
+                    ////Measure time executing
+                    //var watch = System.Diagnostics.Stopwatch.StartNew();
+
                     string pathD = item.Substring(0, (item.Length - 4)); //.enc = 4
                     if (radioD_AES.Checked)
                     {
                         try
                         {
                             var watchfl = System.Diagnostics.Stopwatch.StartNew();
-                            Aes.DecryptFile(item, pathD, txtD_Password.Text);
+                            check = Aes.DecryptFile(item, pathD, txtD_Password.Text);
                             watchfl.Stop();
-                            check = true;
+                            //check = true;
                             var elapsedMsfl = watchfl.ElapsedMilliseconds;
-                            this.Invoke((Action)(() => txtD_Status.Text += item + " => OK. Time: " + elapsedMsfl.ToString() + " ms \r\n"));
+                            if (check)
+                                this.Invoke((Action)(() => txtD_Status.Text += item + " => OK. Time: " + elapsedMsfl.ToString() + " ms \r\n"));
+                            else
+                            {
+                                txtD_Status.ForeColor = Color.Red;
+                                txtD_Status.Text += "Failed!" + "\r\n";
+                            }
                         }
                         catch
                         {
@@ -320,11 +349,17 @@ namespace MatMaAnimal
                         try
                         {
                             var watchfl = System.Diagnostics.Stopwatch.StartNew();
-                            TrippleDES.DecryptFile(item, pathD, txtD_Password.Text);
+                            check = TrippleDES.DecryptFile(item, pathD, txtD_Password.Text);
                             watchfl.Stop();
-                            check = true;
+                            //check = true;
                             var elapsedMsfl = watchfl.ElapsedMilliseconds;
-                            this.Invoke((Action)(() => txtD_Status.Text += item + " => OK. Time: " + elapsedMsfl.ToString() + " ms \r\n"));
+                            if (check)
+                                this.Invoke((Action)(() => txtD_Status.Text += item + " => OK. Time: " + elapsedMsfl.ToString() + " ms \r\n"));
+                            else
+                            {
+                                txtD_Status.ForeColor = Color.Red;
+                                txtD_Status.Text += "Failed!" + "\r\n";
+                            }
 
                         }
                         catch
@@ -333,10 +368,19 @@ namespace MatMaAnimal
                             this.Invoke((Action)(() => txtD_Status.Text += item + "=> Some thing went wrong \r\n"));
                         }
                     }
+
+                    // Del all source files in Folder and its subfolder
+                    if (checkBoxDelSrc.Checked && check)
+                    {
+                        FileInfo f = new FileInfo(txtD_Ciphertext.Text);
+                        f.Delete();
+                    }
+
                 }
                 //Open Target
                 if (checkBoxOpenTarg.Checked == true)
                     Process.Start("explorer.exe", txtD_Ciphertext.Text);
+                
             }
             else
             {
@@ -378,7 +422,7 @@ namespace MatMaAnimal
                 {
                     try
                     {
-                        TrippleDES.DecryptFile(txtD_Ciphertext.Text, pathD, txtD_Password.Text);
+                        check = TrippleDES.DecryptFile(txtD_Ciphertext.Text, pathD, txtD_Password.Text);
                     }
                     catch (Exception eee)
                     {
@@ -405,7 +449,7 @@ namespace MatMaAnimal
 
 
                 //Open Associated Application
-                if (checkBoxOpenAssociatedA.Checked == true)
+                if (checkBoxOpenAssociatedA.Checked == true && check)
                 {
                     try
                     {
@@ -417,9 +461,15 @@ namespace MatMaAnimal
                     }
                 }
                 //checkBoxOpenTargF
-                if (checkBoxOpenTargF.Checked == true)
+                if (checkBoxOpenTargF.Checked == true && check)
                 {
                     Process.Start("explorer.exe", txtD_Plaintext.Text);
+                }
+                // delete source file
+                if (checkBoxDelSrc.Checked && check)
+                {
+                    FileInfo f = new FileInfo(txtD_Ciphertext.Text);
+                    f.Delete();
                 }
             }
 
